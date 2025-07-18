@@ -1,0 +1,149 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #021029 0%, #000205 100%);
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: white;
+}
+
+main {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(67, 67, 67, 0.1) 0.6000000000000001px, transparent 0.6000000000000001px), 
+        linear-gradient(to right, rgba(67, 67, 67, 0.1) 0.6000000000000001px, transparent 0.6000000000000001px);
+    background-size: 20px 20px;
+    background-position: center center;
+    mask-image: linear-gradient(to top, black 0%, black 40%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to top, black 0%, black 40%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Brand Section */
+.brand-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    gap: 12px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    filter: brightness(1.1);
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+/* Content Section */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.main-header {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.sub-header {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #a0a0a0;
+    max-width: 600px;
+    margin-bottom: 16px;
+}
+
+.coming-soon-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    margin-top: 16px;
+}
+
+.coming-soon-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header {
+        font-size: 36px;
+    }
+    
+    .sub-header {
+        font-size: 18px;
+    }
+    
+    .brand-name {
+        font-size: 20px;
+    }
+    
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        font-size: 28px;
+    }
+    
+    .sub-header {
+        font-size: 16px;
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+}
